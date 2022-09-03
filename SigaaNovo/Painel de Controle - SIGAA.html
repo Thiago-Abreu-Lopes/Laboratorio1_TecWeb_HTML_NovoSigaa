@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://127.0.0.1:5500/controlPanel.html -->
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="stylesheet" href="./Painel de Controle - SIGAA_files/main.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Controle - SIGAA</title>
+</head>
+<body>
+    <header>
+        <h1>Painel de Controle - Usuário </h1>
+        <button>Sair</button>
+    </header>
+    <nav>
+        
+        <a href="http://127.0.0.1:5500/controlPanel.html#">Usuário</a>
+        <a href="http://127.0.0.1:5500/controlPanel.html#">Histórico</a>
+        <a href="http://127.0.0.1:5500/controlPanel.html#">Cadastro de Componentes Curriculares</a>
+      
+    </nav>
+    <main>
+        <div class="imagem">
+            <img src="./Painel de Controle - SIGAA_files/simples.jpg" alt="usuário">
+        </div>
+        <h2>Nome: Fulano de Tal</h2>
+        <h3>Email: fulano.de.tal@alu.ufc.br</h3>
+        <h4>IRA: 800.00</h4>
+        <h5>25 créditos computados</h5>
+        <br>
+        <div class="lista_disciplinas">
+            <h2>Disciplinas Cursadas Atualmente</h2>
+            <ul>
+                <li>Calculo Vetorial</li>
+                <li>Física Geral 3</li>
+                <li>Tecnologia Web</li>
+                <li>Métodos Numéricos</li>
+                <li>Fundamentos da Administração</li>
+                <span>Selecione o tema:</span>
+                <input type="color" value="#ffffff">
+                <input type="color" value="#ff0000">
+                <input type="color" value="#0000ff">
+                
+            </ul>
+        </div>
+        <br>
+        <div class="Progresso">
+            <h1>Progresso no Curso</h1>
+            <ul>
+                <li>Disciplinas Obrigatórias <progress value="60" max="100">60%</progress></li>
+                <li>Disciplinas Eletivas <progress value="20" max="100">20%</progress></li>
+                <li>Horas de estágio obrigatório <progress value="30" max="100">30%</progress></li>
+                <li>Horas Complementares <progress value="0" max="100">0%</progress></li>
+                <li>Horas de Extensão <progress value="50" max="100">50%</progress></li>
+                <li>Horas de Programação <progress value="80" max="100">80%</progress></li>
+            </ul>
+        </div>
+        <br>
+        <div class="resumo">
+
+        </div>
+
+    </main>
+    <footer>
+        <h2>SIGAA | Copyright © 2010-2022 - Superintendência de Tecnologia da Informação - UFC - (85) 3366-9999 - si3asprd02.ufc.br</h2>
+    </footer>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
